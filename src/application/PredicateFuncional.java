@@ -23,6 +23,11 @@ public class PredicateFuncional {
 		list.removeIf(PredicateFuncional::productPredicate);
 		list.forEach(System.out::println);
 
+		// EXPRESSÃO LAMBDA INLINE:
+		// NÃO É NECESSÁRIO CRIAR UM MÉTODO BOOLEANO PARA UTILIZAR
+		double min = 100.0; // define-se uma variável com o valor parametrizado
+		list.removeIf(prod -> prod.getPrice() >= min); // cria-se a expressão lambda passando a variável como argumento
+
 	}
 
 }
